@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #d9e2ed; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px); }
+
+.welcome-message {
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #a9a9a9; }
+  .welcome-message .checklist {
+    width: 50px;
+    height: 50px;
+    margin-left: 2rem;
+    opacity: 0.5; }
+
+.add {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px; }
+  .add .input-heading {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px; }
+  .add .input-field {
+    margin-top: 20px;
+    width: 360px;
+    height: 30px;
+    border: 2px solid #a9a9a9;
+    padding-left: 20px; }
+    .add .input-field:focus {
+      border: none;
+      border-bottom: 2px solid #a9a9a9; }
+
+.create-plan {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 400px;
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 13px 3px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column; }
+  .create-plan .close {
+    position: relative;
+    left: 40px;
+    font-size: 2rem; }
+  .create-plan .main-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; }
+    .create-plan .main-field .name-field {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 40px; }
+      .create-plan .main-field .name-field .name_input {
+        width: 300px;
+        height: 40px;
+        border: 2px solid #a9a9a9;
+        padding-left: 10px; }
+    .create-plan .main-field .text-area {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px; }
+      .create-plan .main-field .text-area .description_input {
+        width: 300px;
+        height: 40px;
+        border: 2px solid #a9a9a9;
+        padding-left: 10px; }
+  .create-plan .select-fields {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 90px; }
+    .create-plan .select-fields .priority_input {
+      width: 300px;
+      height: 40px;
+      border: 2px solid #a9a9a9;
+      padding-left: 10px; }
+  .create-plan .submit {
+    margin-top: 7rem;
+    text-align: center; }
+    .create-plan .submit .submit-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 50px;
+      border-radius: 5px;
+      cursor: pointer; }
+
+.status_input {
+  width: 300px;
+  height: 40px;
+  border: 2px solid #a9a9a9;
+  padding-left: 10px; }
+
+.container {
+  width: 95%;
+  margin: 5% auto;
+  display: flex;
+  justify-content: space-between; }
+
+.planned {
+  border-top: 5px solid #708190;
+  border-radius: 7px;
+  padding: 20px;
+  background-color: white;
+  width: 32%; }
+  .planned .heading {
+    color: #708190;
+    display: flex;
+    justify-content: space-between; }
+    .planned .heading span {
+      font-size: 2rem; }
+
+.in-progress {
+  border-radius: 7px;
+  padding: 20px;
+  background-color: white;
+  width: 32%;
+  border-top: 5px solid #fccb61; }
+  .in-progress .heading {
+    color: #708190;
+    display: flex;
+    justify-content: space-between; }
+    .in-progress .heading span {
+      font-size: 2rem; }
+
+.done {
+  border-radius: 7px;
+  padding: 20px;
+  background-color: white;
+  width: 32%;
+  border-top: 5px solid #04ada6; }
+  .done .heading {
+    color: #708190;
+    display: flex;
+    justify-content: space-between; }
+    .done .heading span {
+      font-size: 2rem; }
+
+.add-new {
+  display: flex;
+  justify-content: center; }
+  .add-new .add-button {
+    color: white;
+    margin-top: 20px;
+    background-color: #333;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 5px; }
+
+.myList {
+  list-style: none;
+  margin-top: 20px;
+  border: 1px solid #708190;
+  border-radius: 5px;
+  height: 60px;
+  padding: 5px 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #333;
+  font-weight: bold; }
+  .myList .dd-style {
+    margin-left: 20px;
+    color: #708190; }
+  .myList .trash,
+  .myList .edit,
+  .myList .save {
+    float: right;
+    margin-left: 10px; }

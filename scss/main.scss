@@ -1,0 +1,189 @@
+@import "base";
+@import "variables";
+// @import "loader";
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+.welcome-message {
+  @include flexLayout;
+  margin-top: 2%;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: $color-gray;
+
+  .checklist {
+    width: 50px;
+    height: 50px;
+    margin-left: 2rem;
+    opacity: 0.5;
+  }
+}
+.add {
+  @include flexLayout;
+  flex-direction: column;
+  margin-top: 20px;
+
+  .input-heading {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .input-field {
+    margin-top: 20px;
+    width: 360px;
+    height: 30px;
+    // border: none;
+    border: 2px solid $color-gray;
+    // border-radius: 5px;
+    padding-left: 20px;
+    &:focus {
+      border: none;
+      border-bottom: 2px solid $color-gray;
+    }
+  }
+}
+
+.create-plan {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 400px;
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 13px 3px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  .close {
+    position: relative;
+    left: 40px;
+    font-size: 2rem;
+    // margin-left: auto;
+    // margin-top: 0;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+  }
+  .main-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    .name-field {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 40px;
+      .name_input {
+        @include inputStyles;
+      }
+    }
+    .text-area {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      .description_input {
+        @include inputStyles;
+      }
+    }
+  }
+  .select-fields {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 90px;
+    .priority_input {
+      @include inputStyles;
+    }
+  }
+  .submit {
+    margin-top: 7rem;
+    text-align: center;
+    .submit-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 50px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+.status_input {
+  @include inputStyles;
+}
+
+.container {
+  width: 95%;
+  margin: 5% auto;
+  display: flex;
+  justify-content: space-between;
+}
+.planned {
+  border-top: 5px solid $color-planned;
+  @include task;
+  @include heading;
+}
+.in-progress {
+  @include task;
+  border-top: 5px solid $color-inprogress;
+  @include heading;
+}
+.done {
+  @include task;
+  border-top: 5px solid $color-done;
+  @include heading;
+}
+
+.add-new {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  .add-button {
+    color: white;
+    margin-top: 20px;
+    background-color: #333;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+.myList {
+  list-style: none;
+  margin-top: 20px;
+  border: 1px solid $color-planned;
+  border-radius: 5px;
+  height: 60px;
+  padding: 5px 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #333;
+  font-weight: bold;
+  .dd-style {
+    margin-left: 20px;
+    color: #708190;
+  }
+  .trash,
+  .edit,
+  .save {
+    float: right;
+    margin-left: 10px;
+  }
+}
+
+// .none {
+//   display: none;
+// }

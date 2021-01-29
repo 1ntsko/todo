@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Starts Loader -->
+    <!-- <div class="loader">
+      <div class="inner one"></div>
+      <div class="inner two"></div>
+      <div class="inner three"></div>
+    </div> -->
+    <!-- Ends Loader -->
+
+    <div class="overlay" hidden></div>
+
+    <!-- Starts Header -->
+    <header class="header none">
+      <div class="welcome-message">
+        <h1 class="welcome-message-heading">Welcome to <em>ToDos!</em></h1>
+        <img class="checklist" src="icons/checklist.svg" alt="check" />
+      </div>
+      <div class="add-new">
+        <span class="add-button">Add new ToDo</span>
+      </div>
+    </header>
+    <!-- Ends Header -->
+
+    <!-- Create Plan section -->
+    <section class="create-plan-section" hidden>
+      <div class="create-plan">
+        <div class="main-field">
+          <div class="name-field">
+            <label for="name">Name:</label>
+            <input id="name" type="text" class="name_input" />
+          </div>
+
+          <div class="text-area">
+            <label for="">Description:</label>
+            <input type="text" id="descr" class="description_input" />
+          </div>
+          <div class="close">
+            <span class="close-x"><i class="fas fa-times"></i></span>
+          </div>
+        </div>
+
+        <div class="select-fields">
+          <div class="priority">
+            <label for="numbers">Priority:</label>
+            <select name="priority" id="numbers" class="priority_input">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="status">
+            <label for="status">Status:</label>
+            <select name="status" id="status" class="status_input">
+              <option value="ToDo">ToDo</option>
+              <option value="InProgress">InProgress</option>
+              <option value="Done">Done</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="submit">
+          <span class="submit-button">Submit</span>
+        </div>
+      </div>
+    </section>
+    <!-- Ends Create Plan section -->
+
+    <!-- Starts main container -->
+    <div class="container">
+      <div class="planned bl">
+        <div class="heading">
+          <h1>ToDo</h1>
+          <!-- <span class="hide"><i class="fas fa-times"></i></span> -->
+        </div>
+        <div class="list-content" id="todo">
+          <!-- <ul class="myList"></ul> -->
+        </div>
+      </div>
+
+      <div class="in-progress bl">
+        <div class="heading">
+          <h1>In Progress</h1>
+          <!-- <span class="hide"><i class="fas fa-times"></i></span> -->
+        </div>
+        <div class="list-content" id="inprogress">
+          <!-- <ul class="myList"></ul> -->
+        </div>
+      </div>
+
+      <div class="done bl">
+        <div class="heading">
+          <h1>Done</h1>
+          <!-- <span class="hide"><i class="fas fa-times"></i></span> -->
+        </div>
+        <div class="list-content" id="done">
+          <!-- <ul class="myList"></ul> -->
+        </div>
+      </div>
+    </div>
+    <!-- Ends main container -->
+  </body>
+</html>
